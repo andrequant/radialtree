@@ -10,7 +10,7 @@ from matplotlib.lines import Line2D
 colormap_list=["nipy_spectral", "terrain","gist_rainbow","CMRmap","coolwarm","gnuplot","gist_stern","brg","rainbow"]
 
 def plot(Z2,fontsize=8,figsize=None, pallete="gist_rainbow", addlabels=True, show=True,sample_classes=None,colorlabels=None,
-         colorlabels_legend=None):
+         colorlabels_legend=None, lwidth = 0.5):
     """
     Drawing a radial dendrogram from a scipy dendrogram output.
     Parameters
@@ -59,7 +59,7 @@ def plot(Z2,fontsize=8,figsize=None, pallete="gist_rainbow", addlabels=True, sho
         figsize=[10,5]
     elif figsize==None :
         figsize=[5,5]
-    linewidth=0.5
+    linewidth=lwidth
     R=1
     width=R*0.1
     space=R*0.05
